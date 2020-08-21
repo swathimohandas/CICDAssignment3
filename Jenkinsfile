@@ -1,7 +1,7 @@
 node{
 
    def tomcatWeb = '\\opt\\tomcat\\webapps'
-   def tomcatBin = '/opt/tomcat/bin'
+   def tomcatBin = '/opt/tomcat/bin/'
    def tomcatStatus = ''
    stage('SCM Checkout'){
      git 'https://github.com/swathimohandas/CICDAssignment3.git'
