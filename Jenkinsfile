@@ -1,6 +1,6 @@
 node{
 
-   def tomcatWeb = '\\opt\\tomcat\\webapps\\manager'
+   def tomcatWeb = '/opt/tomcat/webapps/manager'
    def tomcatBin = '/opt/tomcat/bin/'
    def tomcatStatus = ''
    stage('SCM Checkout'){
@@ -24,11 +24,11 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "cp target/JenkinsWar.war  \"${tomcatWeb}\\JenkinsWar.war\""
+     sh "cp target/JenkinsWar.war  /"${tomcatWeb}/JenkinsWar.war ""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
-         sh "${tomcatBin}\\startup.sh"
+         sh "${tomcatBin}/startup.sh"
          sleep(time:100,unit:"SECONDS")
    }
 }
