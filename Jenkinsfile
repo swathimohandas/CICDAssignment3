@@ -24,7 +24,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "cp target/JenkinsWar.war  /"${tomcatWeb}""
+     sh "sudo cp target/JenkinsWar.war  /"${tomcatWeb}""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
